@@ -33,7 +33,7 @@
 		max-width: 265px;
 		overflow: hidden;
 		&:hover {
-			color: $addColorElements;
+			color: #fff;
 		}
 		@media (max-width: $bpTablet) {
 			&__link {
