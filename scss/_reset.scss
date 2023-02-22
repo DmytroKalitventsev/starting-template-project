@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+span,
+img,
+svg,
+textarea,
+input,
+label {
+	display: block;
+}
+
+svg {
+	fill: currentColor;
+	width: 100%;
+	height: 100%;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+}
+
+button,
+input,
+textarea {
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit;
+	font-family: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+button {
+	cursor: pointer;
+	background-color: inherit;
+}

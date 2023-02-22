@@ -1,0 +1,11 @@
+@import "./var";
+@import "./mixins";
+@import "./fonts";
+@import "./reset";
+@import "./common";
+@import "./animate";
+
+// sections
+@import "./sections/header/header";
+@import "./sections/hero/hero";
+@import "./sections/footer/footer";

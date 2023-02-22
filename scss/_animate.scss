@@ -1,0 +1,89 @@
+//!Animation by "name"
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+//!Animation by "class"
+$animate-duration: 2s;
+$animate-delay: 1s;
+$animate-repeat: 1;
+
+.animate {
+	animation-duration: 1s;
+	animation-duration: $animate-duration;
+	animation-fill-mode: both;
+	&_fadeInLeftBig {
+		animation-name: fadeInLeftBig;
+	}
+	&_fadeInRightBig {
+		animation-name: fadeInRightBig;
+	}
+	&_fadeInUpBig {
+		animation-name: fadeInUpBig;
+	}
+	&_jackInTheBox {
+		animation-name: jackInTheBox;
+	}
+}
+
+@keyframes fadeInLeftBig {
+	from {
+		opacity: 0;
+		transform: translate3d(-1000px, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeInRightBig {
+	from {
+		opacity: 0;
+		transform: translate3d(1000px, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeInUpBig {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 1000px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes jackInTheBox {
+	from {
+		opacity: 0;
+		transform: scale(0.1) rotate(30deg);
+		transform-origin: center bottom;
+	}
+
+	50% {
+		transform: rotate(-10deg);
+	}
+
+	70% {
+		transform: rotate(3deg);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,117 @@
+.header {
+	background: #fff;
+	border-bottom: 2px solid #adadad;
+	position: sticky;
+	width: 100%;
+	top: -1px;
+	z-index: 10;
+	&__content {
+		@include flex(space-between);
+		min-height: 100px;
+		column-gap: 40px;
+	}
+}
+.menu {
+	&__list {
+		@include flex;
+		flex-wrap: wrap;
+		column-gap: 40px;
+		font-size: 1.1rem;
+		line-height: 1.2;
+		letter-spacing: 2px;
+		white-space: nowrap;
+		@media (max-width: $bpTablet) {
+			flex-direction: column;
+			text-align: center;
+			font-size: 2rem;
+			letter-spacing: 1px;
+		}
+	}
+	&__link {
+		padding: 15px 0;
+		transition: color 0.2s ease 0s;
+		max-width: 265px;
+		overflow: hidden;
+		&:hover {
+			color: $addColorElements;
+		}
+		@media (max-width: $bpTablet) {
+			&__link {
+				padding: 20px 0;
+			}
+		}
+	}
+	@media (max-width: $bpTablet) {
+		position: fixed;
+		left: -100%;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		padding: 90px 15px 30px 15px;
+		overflow: auto;
+		transition: left 0.3s ease 0s;
+		&::before {
+			content: "";
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: -100%;
+			height: 70px;
+			background-color: #fff;
+			z-index: 10;
+			transition: left 0.3s ease 0s;
+			border-bottom: 2px solid #adadad;
+		}
+	}
+}
+.menu-button {
+	display: none;
+	@media (max-width: $bpTablet) {
+		@include flex(center, center, column);
+		flex: 0 0 50px;
+		width: 50px;
+		height: 50px;
+		border-radius: 10px;
+		position: relative;
+		transition: background-color 0.2s ease 0s;
+		&:hover {
+			background-color: #30326345;
+		}
+		&__item,
+		&::after,
+		&::before {
+			content: "";
+			width: 60%;
+			height: 2px;
+			border-radius: 20px;
+			background: #000;
+			position: absolute;
+			transition: transform 0.3s ease 0s;
+		}
+		&::before {
+			transform: translateY(-8px);
+		}
+		&::after {
+			transform: translateY(8px);
+		}
+	}
+}
+
+@media (max-width: $bpTablet) {
+	.menu-open {
+		& .menu,
+		& .menu::before {
+			left: 0;
+		}
+		& .menu-button__item {
+			width: 0;
+		}
+		& .menu-button::before {
+			transform: rotate(-45deg);
+		}
+		& .menu-button::after {
+			transform: rotate(45deg);
+		}
+	}
+}

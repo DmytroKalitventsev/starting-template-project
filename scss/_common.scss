@@ -1,0 +1,60 @@
+:root {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	color: #000;
+}
+
+body {
+	background-color: #fff;
+	&::-webkit-scrollbar {
+		width: 1.3rem;
+	}
+	&::-webkit-scrollbar-track {
+		background: #fff;
+		box-shadow: 0 0 2px #00000033 inset;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #fff;
+		border: 3px solid #fff;
+		border-radius: 10px;
+		height: 5rem;
+		&:hover {
+			background: #fff;
+		}
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+	min-height: 100%;
+}
+
+[class*="__container"] {
+	max-width: 1430px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.pages {
+	flex: 1 1 auto;
+}
+
+// .button {
+// 	display: inline-block;
+// 	flex: 0 0 auto;
+// 	text-align: center;
+// 	line-height: 1.57;
+// 	font-weight: 600;
+// 	white-space: nowrap;
+// 	font-size: 1.0769rem;
+// 	color: #fff;
+// 	border: 2px solid #000;
+// 	border-radius: 50px;
+// 	&_background {
+// 		color: #fff;
+// 		background-color: #fff;
+// 	}
+// }
